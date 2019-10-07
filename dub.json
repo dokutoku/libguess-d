@@ -1,0 +1,23 @@
+{
+	"name": "libguess-d",
+	"authors":
+	[
+		"dokutoku"
+	],
+	"description": "A library that guesses character encoding written in pure D.",
+	"homepage": "https://gitlab.com/dokutoku/libguess-d",
+	"copyright": "Copyright © 2019, dokutoku",
+	"license": "BSD 3-clause",
+	"configurations":
+	[
+		{
+			"name": "library",
+			"targetType": "library"
+		},
+		{
+			"name": "test",
+			"targetType": "executable",
+			"sourcePaths": ["test"]
+		}
+	]
+}
