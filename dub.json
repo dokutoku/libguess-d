@@ -5,7 +5,6 @@
 		"dokutoku"
 	],
 	"description": "A library that guesses character encoding written in pure D.",
-	"version": "v0.2.0",
 	"homepage": "https://gitlab.com/dokutoku/libguess-d",
 	"copyright": "Copyright © 2019, dokutoku",
 	"license": "BSD 3-clause",
