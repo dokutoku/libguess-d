@@ -1,0 +1,61 @@
+libguess is derived from Gauche-0.8.3, a scheme interpretor by Shiro
+Kawai.
+
+
+
+
+
+int dfa_validate_utf8(const char *buf, int buflen)
+
+This function validates given string is utf8 or not.
+
+buf: string
+
+buflen: length of a string to be validated.
+
+return: 1 if buf is utf8, 0 if not utf8.
+
+
+const char *guess_jp(const char *buf, int buflen)
+
+detect character encoding for a given string in Japanese.
+
+buf: string to be checked.
+
+buflen: length of a string to be checked.
+
+return: encoding name which can be feeded to g_convert() or iconv().
+
+Encoding name is one of folloings: UTF-16, ISO-2022-JP, EUC-JP, SJIS, UTF-8.
+
+returned string is constant, so you MUST NOT free.
+
+If the given string is not ehough long to destinguish, guess_jp takes
+order list into account to determine encoding.
+
+For instance, the order for Japanese is defined as
+
+#define ORDER_JP &utf8, &sjis, &eucj
+
+leftmost encoding has highest priority. it will be applied even if
+only two encodings are alive.
+
+if utf8 and sjis remain, guess_jp will returns utf8.
+
+if sjis and eucj remain, sjis will be returned.
+
+this means if score of each encoding is same, 
+
+
+
+
+const char *guess_tw(const char *buf, int buflen)
+
+
+const char *guess_cn(const char *buf, int buflen)
+
+const char *guess_kr(const char *buf, int buflen)
+
+
+Although gues_xx() can distinguish UCS-2BE and UCS-2LE, g_convert()
+cannot 
