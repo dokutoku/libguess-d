@@ -12,7 +12,7 @@ private static import libguess_d.encoding;
 pure nothrow @safe @nogc
 private void common_first_check(const char[] input, ref libguess_d.encoding.libguess_encoding rv)
 
-	body
+	do
 	{
 		static import libguess_d.dfa;
 
@@ -30,7 +30,7 @@ private void common_first_check(const char[] input, ref libguess_d.encoding.libg
 pure nothrow @trusted @nogc
 libguess_d.encoding.libguess_encoding guess_common(libguess_d.encoding.supported_lang lang)(const char[] input)
 
-	body
+	do
 	{
 		static import libguess_d.dfa;
 		static import libguess_d.encoding;

@@ -50,7 +50,7 @@ private static import libguess_d.encoding;
 pure nothrow @safe @nogc
 private void cjk_first_check(const char[] input, ref libguess_d.encoding.libguess_encoding rv)
 
-	body
+	do
 	{
 		static import libguess_d.dfa;
 
@@ -74,7 +74,7 @@ public libguess_d.encoding.libguess_encoding guess_ja(const char[] input)
 	{
 	}
 
-	body
+	do
 	{
 		static import libguess_d.dfa;
 		static import libguess_d.encoding;
@@ -138,7 +138,7 @@ public libguess_d.encoding.libguess_encoding guess_tw(const char[] input)
 	{
 	}
 
-	body
+	do
 	{
 		static import libguess_d.dfa;
 		static import libguess_d.encoding;
@@ -202,7 +202,7 @@ public libguess_d.encoding.libguess_encoding guess_cn(const char[] input)
 	{
 	}
 
-	body
+	do
 	{
 		static import libguess_d.dfa;
 		static import libguess_d.encoding;
@@ -268,7 +268,7 @@ public libguess_d.encoding.libguess_encoding guess_kr(const char[] input)
 	{
 	}
 
-	body
+	do
 	{
 		static import libguess_d.dfa;
 		static import libguess_d.encoding;

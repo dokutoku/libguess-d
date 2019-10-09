@@ -42,7 +42,7 @@ libguess_d.encoding.libguess_encoding guess_encoding(const char[] input, const l
 		}
 	}
 
-	body
+	do
 	{
 		static import libguess_d.encoding;
 		static import libguess_d.guess.cjk;

@@ -75,7 +75,7 @@ enum supported_lang
 pure nothrow @safe @nogc
 string encoding_name(bool WITH_G_CONVERT = false)(.libguess_encoding input_encoding)
 
-	body
+	do
 	{
 		switch (input_encoding) {
 			case .libguess_encoding.UTF_8:

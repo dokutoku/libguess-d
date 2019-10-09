@@ -111,7 +111,7 @@ public:
 	pure nothrow @safe @nogc
 	this(immutable byte[][256]* st, immutable .guess_arc[]* ar, const libguess_d.encoding.libguess_encoding name)
 
-		body
+		do
 		{
 			this.states = st;
 			this.arcs = ar;
@@ -125,7 +125,7 @@ public:
 	pure nothrow @safe @nogc
 	bool is_alive() const
 
-		body
+		do
 		{
 			return this.state >= 0;
 		}
@@ -161,7 +161,7 @@ public:
 	pure nothrow @trusted @nogc
 	void next(const ubyte ch)
 
-		body
+		do
 		{
 			if (this.is_alive()) {
 				immutable byte arc__ = (*this.states)[this.state][ch];
@@ -190,7 +190,7 @@ public:
 pure nothrow @safe @nogc
 bool dfa_none(S)(const ref S order)
 
-	body
+	do
 	{
 		for (size_t i = 0; i < order.length; i++) {
 			if (order[i].is_alive()) {
@@ -210,7 +210,7 @@ bool dfa_none(S)(const ref S order)
 pure nothrow @safe @nogc
 libguess_d.encoding.libguess_encoding dfa_top(S)(const ref S order)
 
-	body
+	do
 	{
 		static import libguess_d.encoding;
 
@@ -240,7 +240,7 @@ libguess_d.encoding.libguess_encoding dfa_top(S)(const ref S order)
 pure nothrow @safe @nogc
 libguess_d.encoding.libguess_encoding check_UTF16_BOM(const char[] input)
 
-	body
+	do
 	{
 		static import libguess_d.encoding;
 
@@ -266,7 +266,7 @@ libguess_d.encoding.libguess_encoding check_UTF16_BOM(const char[] input)
 pure nothrow @trusted @nogc
 libguess_d.encoding.libguess_encoding dfa_process(S)(ref S order, const ubyte c)
 
-	body
+	do
 	{
 		static import libguess_d.encoding;
 

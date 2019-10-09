@@ -9,7 +9,7 @@ private static import libguess_d.libguess;
 
 void main(string[] argv)
 
-	body
+	do
 	{
 		static import std.stdio;
 		static import libguess_d.libguess;
